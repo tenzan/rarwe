@@ -27,10 +27,10 @@ var pretender = Song.create({
 var SongCollection = Ember.Object.extend({
   content: [],
   sortProperties: ['rating:desc'],
-  sortedContent: Ember.computed.sort('content', 'sortProperties'),
+  sortedContent: Ember.computed.sort('content', 'sortProperties')
 });
 
-var songs = SongCollection.crete();
+var songs = SongCollection.create();
 songs.get('content').pushObject(blackDog);
 songs.get('content').pushObject(yellowLedbetter);
 songs.get('content').pushObject(pretender);
