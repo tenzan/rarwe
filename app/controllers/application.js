@@ -46,5 +46,5 @@ var alwaysWaiting = Song.create({
 window.newSong = alwaysWaiting;
 
 export default Ember.Controller.extend({
-  songs: songs.get('sortedContent')
+  songs: songs
 });
