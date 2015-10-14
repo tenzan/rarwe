@@ -2,15 +2,10 @@ import Ember from 'ember';
 
 var Band = Ember.Object.extend({
   name: '',
-  language: '',
 
   slug: Ember.computed('name', function () {
     return this.get('name').dasherize();
-  }.property('name')),
-
-  site: Ember.computed('slug', 'language', function () {
-    return 'http://localhost:4200/' + this.get('slug' + '.' + this.get('language'));
-  }.property('site', 'language'))
+  }),
 });
 
 var Song = Ember.Object.extend({
